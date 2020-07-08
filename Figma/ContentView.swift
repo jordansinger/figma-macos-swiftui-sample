@@ -87,33 +87,7 @@ struct ContentView: View {
 struct Canvas: View {
     var body: some View {
         NavigationView {
-            ZStack {
-                HStack {
-                    Spacer()
-                    VStack {
-                        Spacer()
-                    }
-                    Spacer()
-                }
-                
-                Rectangle()
-                    .offset(x: -128, y: -128)
-                    .frame(width: 96, height: 96)
-                    .foregroundColor(.red)
-                
-                Circle()
-                    .offset(x: 0, y: 0)
-                    .frame(width: 96, height: 96)
-                    .foregroundColor(.green)
-                
-                Text("Hello, world!")
-                    .offset(x: 128, y: -128)
-                
-                RoundedRectangle(cornerRadius: 12)
-                    .offset(x: 128, y: 128)
-                    .frame(width: 96, height: 96)
-                    .foregroundColor(.blue)
-            }
+            CanvasView()
             .frame(width: 540)
             .background(Color(NSColor.controlBackgroundColor))
             
